@@ -1,5 +1,6 @@
 package mczme.playerspecialactions.common.item;
 
+import mczme.playerspecialactions.common.action.Kinich;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -14,7 +15,9 @@ public class testItem extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand){
-        player.setDeltaMovement(10, 3, 2);
+//        player.setDeltaMovement(10, 3, 2);
+            Kinich kinich = new Kinich();
+            kinich.ElementalSkill(player, level);
         return super.use(level, player, usedHand);
     }
 }
